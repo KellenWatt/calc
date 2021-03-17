@@ -1,0 +1,47 @@
+package main
+
+import (
+	. "github.com/KellenWatt/calc"
+)
+
+var mappings = map[string]func(*Calculator)error {
+	"pop": (*Calculator).Pop,
+	"!": (*Calculator).Pop,
+	"swap": (*Calculator).Swap,
+	"dup": (*Calculator).Duplicate,
+	"&": (*Calculator).Duplicate,
+	"truncate": (*Calculator).Truncate,
+	"trunc": (*Calculator).Truncate,
+	"floor": (*Calculator).Truncate,
+	"neg": (*Calculator).Negate,
+	"(-)": (*Calculator).Negate,
+	"add": (*Calculator).Add,
+	"+": (*Calculator).Add,
+	"sub": (*Calculator).Subtract,
+	"-": (*Calculator).Subtract,
+	"mult": (*Calculator).Multiply,
+	"*": (*Calculator).Multiply,
+	"fdiv": (*Calculator).Divide,
+	"/": (*Calculator).Divide,
+	"div": (*Calculator).IntegerDivide,
+	"//": (*Calculator).IntegerDivide,
+	"mod": (*Calculator).Modulo,
+	"%": (*Calculator).Modulo,
+	"pow": (*Calculator).Power,
+	"**": (*Calculator).Power,
+	"^": (*Calculator).Power,
+	"compare": (*Calculator).Compare,
+	"<=>": (*Calculator).Compare,
+	"log": (*Calculator).Log,
+	"log10": (*Calculator).Log10,
+	"ln": (*Calculator).NaturalLog,
+	"sine": (*Calculator).Sine,
+	"sin": (*Calculator).Sine,
+	"cosine": (*Calculator).Cosine,
+	"cos": (*Calculator).Cosine,
+	"tangent": (*Calculator).Tangent,
+	"tan": (*Calculator).Tangent,
+	"sqrt": (*Calculator).SquareRoot,
+	"abs": (*Calculator).AbsoluteValue,
+	"||": (*Calculator).AbsoluteValue,
+}
